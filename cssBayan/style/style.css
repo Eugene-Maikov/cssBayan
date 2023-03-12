@@ -5,6 +5,7 @@
 }
 body {
   font-family: "Arial", sans-serif;
+  background: #d5d5ff;
 }
 a {
   text-decoration: none;
@@ -18,8 +19,7 @@ a {
 }
 .page {
   width: 100%;
-  background: #d5d5ff;
-  padding: 3em 0 5em 0;
+  padding: 4em 0 10em 0;
 }
 /* ==================================================== */
 
@@ -59,13 +59,17 @@ a {
 
 /* ==================================================== */
 .accordion {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
-/* .fa-plus,
-.fa-times {
+.accordion__states {
   display: none;
-} */
+}
+.fa-plus,
+.fa-times {
+  font-size: 1.5em;
+  padding-left: 0.5em;
+}
 .accordion__title {
   display: flex;
   align-items: center;
@@ -73,8 +77,8 @@ a {
   font-size: 1.5em;
   height: 6vh;
 }
-.accordion__item{
-  border-bottom: .3em solid #d5d5ff;
+.accordion__item {
+  border-bottom: 0.3em solid #d5d5ff;
 }
 .accordion__head {
   display: flex;
@@ -85,23 +89,24 @@ a {
   height: 10vh;
   padding: 0 1em;
   cursor: pointer;
+  transition: all 0.2s linear;
 }
-.accordion__item{
+.accordion__item {
   cursor: pointer;
 }
-.accordion__head span{
+.accordion__head span {
   font-size: 1.5em;
   color: #000;
   font-weight: 600;
 }
 .accordion__body {
-  background-color: #ffe7e7;
+  background-color: #f8e4e4;
   justify-content: center;
   display: flex;
   align-items: center;
   height: 0;
   overflow: hidden;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 .accordion__body img {
   display: block;
@@ -113,22 +118,35 @@ a {
 /* .accordion__list:hover .fa-plus {
   display: block;
 } */
-.accordion__input{
+.accordion__input {
   display: none;
 }
-.fa-times{
-  display: none;
-}
-.accordion__item:hover .accordion__input[checked="true"] ~ 
 
-.accordion__item:hover .accordion__input[checked="true"] ~ .accordion__body {
-  background-color: #faecec;
+.accordion__item:hover .accordion__input:checked ~ .accordion__body {
+  background-color: #fae2e2;
 }
-
 .accordion__input:checked ~ .accordion__body {
   height: 22em;
+  background-color: #fad8d8;
 }
-
-.accordion__head:hover ~ .accordion__body {
+.accordion__input:checked ~ .accordion__head {
+  background-color: #f8b8b8;
+}
+.accordion__input:checked ~ .accordion__head .fa-plus {
+  display: none;
+}
+.accordion__input:not(:checked) ~ .accordion__head .fa-times {
+  display: none;
+}
+.accordion__item:hover .accordion__head .fa-plus {
+  display: none;
+}
+.accordion__item:hover .accordion__head .fa-times {
+  display: block;
+}
+.accordion__item:hover > .accordion__body {
   height: 22em;
+}
+.accordion__list:hover .accordion__states {
+  display: block;
 }
