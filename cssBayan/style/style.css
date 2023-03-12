@@ -21,41 +21,6 @@ a {
   width: 100%;
   padding: 4em 0 10em 0;
 }
-/* ==================================================== */
-
-/* label {
-  cursor: pointer;
-  font-size: 20px;
-  color: #777;
-}
-
-.block {
-  position: absolute;
-  width: 500px;
-  height: 0;
-  background-color: #ccc;
-  transition: all 0.2s linear;
-  overflow: auto;
-}
-.label {
-  width: 500px;
-  display: block;
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  transition: all 0.2s linear;
-}
-.label:hover {
-  background-color: #f5f4f4;
-}
-.label:hover ~ .block {
-  height: 200px;
-}
-.checkbox {
-  display: none;
-}
-.checkbox:checked ~ .block {
-  height: 200px;
-} */
 
 /* ==================================================== */
 .accordion {
@@ -115,9 +80,6 @@ a {
 }
 /* ==================================================== */
 
-/* .accordion__list:hover .fa-plus {
-  display: block;
-} */
 .accordion__input {
   display: none;
 }
