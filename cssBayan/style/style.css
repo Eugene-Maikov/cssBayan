@@ -12,13 +12,18 @@ a {
   display: inline-block;
 }
 .container {
-  max-width: 1900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
 }
+.page {
+  width: 100%;
+  background: #d5d5ff;
+  padding: 3em 0 5em 0;
+}
 /* ==================================================== */
 
-label {
+/* label {
   cursor: pointer;
   font-size: 20px;
   color: #777;
@@ -32,17 +37,17 @@ label {
   transition: all 0.2s linear;
   overflow: auto;
 }
-.label{
+.label {
   width: 500px;
   display: block;
   padding: 10px 20px;
   border: 1px solid #ccc;
   transition: all 0.2s linear;
 }
-.label:hover{
+.label:hover {
   background-color: #f5f4f4;
 }
-.label:hover ~ .block{
+.label:hover ~ .block {
   height: 200px;
 }
 .checkbox {
@@ -50,4 +55,80 @@ label {
 }
 .checkbox:checked ~ .block {
   height: 200px;
+} */
+
+/* ==================================================== */
+.accordion {
+  width: 60%;
+  margin: 0 auto;
+}
+/* .fa-plus,
+.fa-times {
+  display: none;
+} */
+.accordion__title {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.5em;
+  height: 6vh;
+}
+.accordion__item{
+  border-bottom: .3em solid #d5d5ff;
+}
+.accordion__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background: #fff;
+  height: 10vh;
+  padding: 0 1em;
+  cursor: pointer;
+}
+.accordion__item{
+  cursor: pointer;
+}
+.accordion__head span{
+  font-size: 1.5em;
+  color: #000;
+  font-weight: 600;
+}
+.accordion__body {
+  background-color: #ffe7e7;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  transition: all .2s linear;
+}
+.accordion__body img {
+  display: block;
+  max-width: 100%;
+  height: 20em;
+}
+/* ==================================================== */
+
+/* .accordion__list:hover .fa-plus {
+  display: block;
+} */
+.accordion__input{
+  display: none;
+}
+.fa-times{
+  display: none;
+}
+.accordion__item:hover .accordion__input[checked="true"] ~ 
+
+.accordion__item:hover .accordion__input[checked="true"] ~ .accordion__body {
+  background-color: #faecec;
+}
+
+.accordion__input:checked ~ .accordion__body {
+  height: 22em;
+}
+
+.accordion__head:hover ~ .accordion__body {
+  height: 22em;
 }
