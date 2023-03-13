@@ -9,9 +9,13 @@
   .accordion__head span {
     font-size: 2em;
   }
-  .accordion__states{
+  .accordion__states {
     display: block;
   }
+
+  .accordion__states {
+  display: block;
+}
 }
 @media (max-width: 768px) {
   .accordion__title {
